@@ -34,5 +34,113 @@
             </conditions>
             <actions />
         </event-block>
+        <event-block sid="5975105716564168">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5374858430089665" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="398176454833431" type="Sprite2">
+                    <param id="0" name="Object">Sprite6</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8843628334473393">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4673726237494222" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6180812039786152" type="Sprite2">
+                    <param id="0" name="Animation">&quot;WalkRight&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6323923333809909">
+            <conditions>
+                <condition id="3" name="On key released" sid="6227971722415279" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="9925762205342082" type="Sprite2" />
+            </actions>
+        </event-block>
+        <event-block sid="4049638103285522">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4216486480812346" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7041394639227134" type="Sprite2">
+                    <param id="0" name="Animation">&quot;WalkLeft&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6719048764933185">
+            <conditions>
+                <condition id="3" name="On key released" sid="9115292678053286" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="6546474393132838" type="Sprite2" />
+            </actions>
+        </event-block>
+        <event-block sid="766232706250316">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6263916209387305" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4469985344066784" type="Sprite2">
+                    <param id="0" name="Animation">&quot;Defualt&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1309373041908721">
+            <conditions>
+                <condition id="3" name="On key released" sid="2294142676506167" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="4945277393140735" type="Sprite2" />
+            </actions>
+        </event-block>
+        <event-block sid="8837436756550611">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6838924670504952" type="Sprite6">
+                    <param id="0" name="Object">Sprite5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="2574417649837397" type="Sprite5">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">random(6, 12)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7718992470290207">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7440145339145679" type="Sprite5">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2352065702639633" type="Sprite5" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
