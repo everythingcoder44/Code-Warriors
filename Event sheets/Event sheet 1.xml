@@ -46,6 +46,10 @@
                     <param id="1" name="Layer">2</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action id="-22" name="Set angle toward position" sid="460562760701927" type="Sprite6">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8843628334473393">
@@ -140,6 +144,18 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="2352065702639633" type="Sprite5" />
+            </actions>
+        </event-block>
+        <event-block sid="9898464806274392">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="9813723789742521" type="Sprite5" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="18804894290668" type="Sprite5">
+                    <param id="0" name="Object">Sprite5</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
     </events>
