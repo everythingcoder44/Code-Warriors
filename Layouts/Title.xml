@@ -88,10 +88,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>295</x>
-                        <y>353</y>
+                        <y>327</y>
                         <z>0</z>
-                        <width>295</width>
-                        <height>55</height>
+                        <width>318</width>
+                        <height>81</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
