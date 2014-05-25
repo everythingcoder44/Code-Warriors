@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>Event sheet 2</name>
     <events>
-        <event-block sid="1440740818311637">
+        <event-block sid="6639265937095402">
             <conditions>
-                <condition id="0" name="On clicked" sid="3267588953536538" type="Button3" />
+                <condition id="0" name="On clicked" sid="4441361707814233" type="Button4" />
             </conditions>
             <actions>
-                <action id="-25" name="Go to layout (by name)" sid="3207521153226999" type="System">
+                <action id="-25" name="Go to layout (by name)" sid="5786416547479125" type="System">
                     <param id="0" name="Layout">&quot;Title&quot;</param>
                 </action>
             </actions>

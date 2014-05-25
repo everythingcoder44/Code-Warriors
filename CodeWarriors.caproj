@@ -10,6 +10,7 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -18,13 +19,14 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
@@ -275,7 +277,7 @@
         <object-type name="Sprite4" sid="9284498808677878">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Solid" sid="5797816281026997">
+                <behavior-type name="Solid" sid="1169316667155648">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
@@ -303,19 +305,25 @@
                 <behavior-type name="LineOfSight" sid="6797200014866962">
                     <behavior id="LOS" />
                 </behavior-type>
+                <behavior-type name="Pathfinding" sid="2254871277593155">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="7355906937866662">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9063238404335507" speed="5">
-                    <frame duration="1" hotspotX="0.503448" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.496552" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.268966" y="0.39" />
-                            <point x="0.496552" y="0.24" />
-                            <point x="0.931035" y="0.1" />
-                            <point x="0.724138" y="0.5" />
-                            <point x="0.931035" y="0.9" />
-                            <point x="0.496552" y="0.75" />
-                            <point x="0.248276" y="0.64" />
-                            <point x="0.0206897" y="0.5" />
+                            <point x="0.731034" y="0.61" />
+                            <point x="0.503448" y="0.76" />
+                            <point x="0.068965" y="0.9" />
+                            <point x="0.275862" y="0.5" />
+                            <point x="0.068965" y="0.1" />
+                            <point x="0.503448" y="0.25" />
+                            <point x="0.751724" y="0.36" />
+                            <point x="0.97931" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -396,11 +404,6 @@
         </object-type>
         <object-type name="Text" sid="430686170792817">
             <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Flash" sid="1999728214894419">
-                    <behavior id="Flash" />
-                </behavior-type>
-            </behaviors>
         </object-type>
         <object-type name="TiledBackground6" sid="2368962989852538">
             <plugin id="TiledBg" />
@@ -420,15 +423,107 @@
         <object-type name="Text2" sid="8009055876483157">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Sprite9" sid="7743906462969887">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="9776429402270403">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6909216629321937" speed="5">
+                    <frame duration="1" hotspotX="0.531915" hotspotY="0.853659" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="1182710752045219">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="7441600939656873">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3737452540398982" speed="5">
+                    <frame duration="1" hotspotX="0.531915" hotspotY="0.853659" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="8427453087020439">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5308940300299912">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8572536865313313" speed="5">
+                    <frame duration="1" hotspotX="0.531915" hotspotY="0.853659" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="3167958191678974">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="8188680934397667">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4378369841520247" speed="5">
+                    <frame duration="1" hotspotX="0.531915" hotspotY="0.853659" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button" sid="4777364669943566">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Button2" sid="6631581875125161">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text3" sid="4398672644515962">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="3048603596244585">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Button3" sid="9093394375847224">
+            <plugin id="Button" />
+            <instance-variables>
+                <instance-variable name="Health" sid="7750320016038848" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Text5" sid="4941508744888165">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Button4" sid="5848267577753396">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Sprite13" sid="1810976399000011">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7085008441888681" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-3.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-3.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-3.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-3.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-3.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Title.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Instructions.xml</layout>
+        <layout>GameOver.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>GameSheet.xml</event-sheet>
         <event-sheet>TitleSheet.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="30" />
