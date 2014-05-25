@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-group description="" sid="4151878136294075" title="controls p2" />
+        <event-block sid="9761605322658626">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9135850852370379" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="7548110154384452" type="Sprite2">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9757795621796318">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1509672479953822" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="8637919390196457" type="Sprite2">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9031550937992467">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="229529420641829" type="Sprite2" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
