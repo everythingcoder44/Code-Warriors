@@ -6,27 +6,13 @@
         <comment>Title Event Sheet</comment>
         <event-block sid="206600753293414">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="6293482930556253" type="System" />
+                <condition id="-18" name="Is in preview" sid="6293482930556253" type="System" />
             </conditions>
             <actions>
                 <action behavior="Flash" id="0" name="Flash" sid="1470244934808874" type="Text">
                     <param id="0" name="&apos;On&apos; time">0.5</param>
                     <param id="1" name="&apos;Off&apos; time">0.3</param>
                     <param id="2" name="Duration">3600</param>
-                </action>
-                <action id="4" name="Set animation" sid="4792338281906981" type="Sprite2">
-                    <param id="0" name="Animation">&quot;WalkRight2&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Platform" id="7" name="Simulate control" sid="3690307980386528" type="Sprite2">
-                    <param id="0" name="Control">1</param>
-                </action>
-                <action id="7" name="Play (by name)" sid="771543857102629" type="Title">
-                    <param id="0" name="Folder">1</param>
-                    <param id="1" name="Audio file name">&quot;Title.m4a&quot;</param>
-                    <param id="3" name="Loop">1</param>
-                    <param id="4" name="Volume">0</param>
-                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>

@@ -10,7 +10,6 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -114,9 +113,6 @@
                 </behavior-type>
                 <behavior-type name="BoundToLayout" sid="705790107634215">
                     <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="Solid" sid="8984853288151914">
-                    <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -424,9 +420,6 @@
         <object-type name="Text2" sid="8009055876483157">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Title" sid="2734575374819711">
-            <plugin id="Audio" />
-        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -440,26 +433,9 @@
     <global-instances>
         <global-instance type="Keyboard" uid="30" />
         <global-instance type="Mouse" uid="48" />
-        <global-instance type="Title" uid="54">
-            <properties>
-                <timescale-audio>Off</timescale-audio>
-                <saveload>All</saveload>
-                <positioned-audio></positioned-audio>
-                <panning-model>HRTF</panning-model>
-                <distance-model>Inverse</distance-model>
-                <listener-z-height>600</listener-z-height>
-                <reference-distance>600</reference-distance>
-                <maximum-distance>10000</maximum-distance>
-                <roll-off-factor>1</roll-off-factor>
-                <speed-of-sound>5000</speed-of-sound>
-                <doppler-factor>1</doppler-factor>
-            </properties>
-        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
-    <music-folder expanded="1">
-        <file name="Title.m4a" />
-    </music-folder>
+    <music-folder expanded="1" />
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
