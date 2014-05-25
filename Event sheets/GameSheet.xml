@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameSheet</name>
+    <events>
+        <event-group description="" sid="4151878136294075" title="controls p2" />
+        <event-block sid="9761605322658626">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9135850852370379" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="7548110154384452" type="Sprite2">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9757795621796318">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1509672479953822" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="8637919390196457" type="Sprite2">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9031550937992467">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="229529420641829" type="Sprite2" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="5975105716564168">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5374858430089665" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="398176454833431" type="Sprite2">
+                    <param id="0" name="Object">Sprite6</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="460562760701927" type="Sprite6">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8843628334473393">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4673726237494222" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6180812039786152" type="Sprite2">
+                    <param id="0" name="Animation">&quot;WalkRight&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6323923333809909">
+            <conditions>
+                <condition id="3" name="On key released" sid="6227971722415279" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="9925762205342082" type="Sprite2" />
+            </actions>
+        </event-block>
+        <event-block sid="4049638103285522">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4216486480812346" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7041394639227134" type="Sprite2">
+                    <param id="0" name="Animation">&quot;WalkLeft&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6719048764933185">
+            <conditions>
+                <condition id="3" name="On key released" sid="9115292678053286" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="6546474393132838" type="Sprite2" />
+            </actions>
+        </event-block>
+        <event-block sid="766232706250316">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6263916209387305" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4469985344066784" type="Sprite2">
+                    <param id="0" name="Animation">&quot;Defualt&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1309373041908721">
+            <conditions>
+                <condition id="3" name="On key released" sid="2294142676506167" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="4945277393140735" type="Sprite2" />
+            </actions>
+        </event-block>
+        <event-block sid="8837436756550611">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6838924670504952" type="Sprite6">
+                    <param id="0" name="Object">Sprite5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="2574417649837397" type="Sprite5">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">random(6, 12)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7718992470290207">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7440145339145679" type="Sprite5">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2352065702639633" type="Sprite5" />
+            </actions>
+        </event-block>
+        <event-block sid="9898464806274392">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="9813723789742521" type="Sprite5" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="3445614482886045" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="18804894290668" type="Sprite5">
+                    <param id="0" name="Object">Sprite5</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">random(1,100)</param>
+                </action>
+                <action id="-11" name="Add to" sid="5930608093092657" type="Sprite2">
+                    <param id="0" name="Instance variable">XP</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5071815100880389">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6746593659384158" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="7835166315658008" type="Sprite2">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1967744322812357">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3051584520156425" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="8696354765813133" type="Sprite2">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1674372088496559">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3025920153739615" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3759585825909418" type="Sprite2">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2237771099538316">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6046945786011403" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4481923174213606" type="Sprite3">
+                    <param id="0" name="Object">Sprite7</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="71402986009683">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6699494605379329" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3506165415681058" type="Sprite3">
+                    <param id="0" name="Animation">&quot;WalkRight2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7636322981157498">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6499266673523768" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8081325371678218" type="Sprite3">
+                    <param id="0" name="Animation">&quot;WalkLeft2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8308621664556295">
+            <conditions>
+                <condition id="2" name="Key is down" sid="8223120911244193" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4287560958851968" type="Sprite3">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5810211677639067">
+            <conditions>
+                <condition behavior="Turret" id="0" name="Has target" sid="1600899903995385" type="Sprite5" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="2155546692250411" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1859864612875856" type="Sprite5">
+                    <param id="0" name="Object">Sprite8</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6853095541429715" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5727611195699185">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1567819043288472" type="Sprite7">
+                    <param id="0" name="Object">Sprite5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="4380788142986942" type="Sprite5">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">random (6-12)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7719002823200222">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4266838616749537" type="Sprite5">
+                    <param id="0" name="Object">Sprite2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="5406896515019422" type="Sprite5">
+                    <param id="0" name="Target">Sprite2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7082184184399254">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="2890865172387705" type="Sprite5">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="822229061051317" type="Sprite5">
+                    <param id="0" name="Target">Sprite3</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

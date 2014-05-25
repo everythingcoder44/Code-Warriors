@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>New project</name>
+    <name>CodeWarriors</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -13,13 +13,18 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
@@ -78,6 +83,9 @@
                 </behavior-type>
                 <behavior-type name="Wrap" sid="92490694352821">
                     <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="8320144745452921">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -245,16 +253,22 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2622674540126339" speed="5">
-                    <frame duration="1" hotspotX="4.8125" hotspotY="0.505128" />
+                    <frame duration="1" hotspotX="0.480769" hotspotY="0.535897">
+                        <image-point name="Left" x="0.5" y="0.5" />
+                        <image-point name="Right" x="0.5" y="0.5" />
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="WalkRight2" pingpong="0" repeatcount="1" repeatto="0" sid="4538688631707659" speed="5">
-                    <frame duration="1" hotspotX="0.416667" hotspotY="0.655556" />
-                    <frame duration="1" hotspotX="0.467153" hotspotY="0.644444" />
-                    <frame duration="1" hotspotX="0.571429" hotspotY="0.630435" />
-                    <frame duration="1" hotspotX="0.637037" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0.42" hotspotY="0.657068" />
+                    <frame duration="1" hotspotX="0.466346" hotspotY="0.64359" />
+                    <frame duration="1" hotspotX="0.572115" hotspotY="0.630769" />
+                    <frame duration="1" hotspotX="0.639423" hotspotY="0.666667" />
                 </animation>
-                <animation framecount="1" loop="0" name="WalkLeft2" pingpong="0" repeatcount="1" repeatto="0" sid="693094235289212" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="4" loop="0" name="WalkLeft2" pingpong="0" repeatcount="1" repeatto="0" sid="693094235289212" speed="5">
+                    <frame duration="1" hotspotX="0.389423" hotspotY="0.569231" />
+                    <frame duration="1" hotspotX="0.471154" hotspotY="0.546154" />
+                    <frame duration="1" hotspotX="0.485577" hotspotY="0.551282" />
+                    <frame duration="1" hotspotX="0.596154" hotspotY="0.551282" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -282,6 +296,12 @@
             <behaviors>
                 <behavior-type name="Solid" sid="4739104106859631">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Turret" sid="3236783364528394">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="6797200014866962">
+                    <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -342,13 +362,73 @@
         <object-type name="Mouse" sid="3676722908916212">
             <plugin id="Mouse" />
         </object-type>
+        <object-type name="Sprite7" sid="5036574430954384">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="4756268454865574">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="8893077929886448">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4414488408768876" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502793" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="1605086995547733">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="7893454795546442">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="6196816342210218">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598425455430524" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="430686170792817">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Flash" sid="1999728214894419">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="TiledBackground6" sid="2368962989852538">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="8048283640297956">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="9436776538780981">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="8475381721844393">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Text2" sid="8009055876483157">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>Title.xml</layout>
+        <layout>Game.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>GameSheet.xml</event-sheet>
+        <event-sheet>TitleSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="30" />
