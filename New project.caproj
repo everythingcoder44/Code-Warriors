@@ -87,6 +87,11 @@
         </object-type>
         <object-type name="Sprite2" sid="7851923042854302">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="4259902692203216" type="number" />
+                <instance-variable name="XP" sid="6302885679164802" type="number" />
+                <instance-variable name="Power" sid="6279170048447134" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="4476233117403486">
                     <behavior id="Physics" />

@@ -154,7 +154,11 @@
                 <action id="0" name="Spawn another object" sid="18804894290668" type="Sprite5">
                     <param id="0" name="Object">Sprite5</param>
                     <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">random(1,100)</param>
+                </action>
+                <action id="-11" name="Add to" sid="5930608093092657" type="Sprite2">
+                    <param id="0" name="Instance variable">XP</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

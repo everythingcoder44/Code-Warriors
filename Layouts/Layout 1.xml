@@ -694,6 +694,11 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Health>100</Health>
+                        <XP>0</XP>
+                        <Power>12</Power>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
                             <properties>
@@ -1124,7 +1129,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>10000</Health>
+                        <Health>1000</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
