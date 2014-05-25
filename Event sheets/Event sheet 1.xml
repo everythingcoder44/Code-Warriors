@@ -55,7 +55,7 @@
         <event-block sid="8843628334473393">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4673726237494222" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
+                    <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
@@ -68,7 +68,7 @@
         <event-block sid="6323923333809909">
             <conditions>
                 <condition id="3" name="On key released" sid="6227971722415279" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
+                    <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
@@ -78,7 +78,7 @@
         <event-block sid="4049638103285522">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4216486480812346" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
+                    <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
@@ -91,7 +91,7 @@
         <event-block sid="6719048764933185">
             <conditions>
                 <condition id="3" name="On key released" sid="9115292678053286" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
+                    <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
@@ -101,7 +101,7 @@
         <event-block sid="766232706250316">
             <conditions>
                 <condition id="0" name="On key pressed" sid="6263916209387305" type="Keyboard">
-                    <param id="0" name="Key">38 (Up arrow)</param>
+                    <param id="0" name="Key">87 (W)</param>
                 </condition>
             </conditions>
             <actions>
@@ -114,7 +114,7 @@
         <event-block sid="1309373041908721">
             <conditions>
                 <condition id="3" name="On key released" sid="2294142676506167" type="Keyboard">
-                    <param id="0" name="Key">38 (Up arrow)</param>
+                    <param id="0" name="Key">87 (W)</param>
                 </condition>
             </conditions>
             <actions>
@@ -159,6 +159,42 @@
                 <action id="-11" name="Add to" sid="5930608093092657" type="Sprite2">
                     <param id="0" name="Instance variable">XP</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5071815100880389">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6746593659384158" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="7835166315658008" type="Sprite2">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1967744322812357">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3051584520156425" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="8696354765813133" type="Sprite2">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1674372088496559">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3025920153739615" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3759585825909418" type="Sprite2">
+                    <param id="0" name="Control">1</param>
                 </action>
             </actions>
         </event-block>

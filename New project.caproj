@@ -19,6 +19,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
@@ -75,7 +76,7 @@
                 <behavior-type name="Solid" sid="1127462000651389">
                     <behavior id="solid" />
                 </behavior-type>
-                <behavior-type name="Wrap" sid="771716779097687">
+                <behavior-type name="Wrap" sid="92490694352821">
                     <behavior id="wrap" />
                 </behavior-type>
             </behaviors>
@@ -101,6 +102,9 @@
                 </behavior-type>
                 <behavior-type name="ScrollTo" sid="6605182377679434">
                     <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="705790107634215">
+                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -235,10 +239,22 @@
                 <behavior-type name="Platform" sid="9446311309043688">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="BoundToLayout" sid="8091597770671081">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2622674540126339" speed="5">
                     <frame duration="1" hotspotX="4.8125" hotspotY="0.505128" />
+                </animation>
+                <animation framecount="4" loop="0" name="WalkRight2" pingpong="0" repeatcount="1" repeatto="0" sid="4538688631707659" speed="5">
+                    <frame duration="1" hotspotX="0.416667" hotspotY="0.655556" />
+                    <frame duration="1" hotspotX="0.467153" hotspotY="0.644444" />
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.630435" />
+                    <frame duration="1" hotspotX="0.637037" hotspotY="0.666667" />
+                </animation>
+                <animation framecount="1" loop="0" name="WalkLeft2" pingpong="0" repeatcount="1" repeatto="0" sid="693094235289212" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
