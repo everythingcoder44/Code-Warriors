@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleSheet</name>
+    <events>
+        <comment>Title Event Sheet</comment>
+        <event-block sid="206600753293414">
+            <conditions>
+                <condition id="-18" name="Is in preview" sid="6293482930556253" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="1470244934808874" type="Text">
+                    <param id="0" name="&apos;On&apos; time">0.5</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">3600</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3305484786095373">
+            <conditions>
+                <condition id="0" name="On click" sid="170244129572732" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="5384626165077196" type="System">
+                    <param id="0" name="Layout">&quot;Game&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6641159984267582">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="9385444454699619" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="5381169009752593" type="System">
+                    <param id="0" name="Layout">&quot;Game&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

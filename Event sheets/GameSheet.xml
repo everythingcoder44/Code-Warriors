@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>GameSheet</name>
     <events>
         <event-group description="" sid="4151878136294075" title="controls p2" />
         <event-block sid="9761605322658626">
@@ -151,6 +151,9 @@
                 <condition id="-19" name="On destroyed" sid="9813723789742521" type="Sprite5" />
             </conditions>
             <actions>
+                <action id="-16" name="Wait" sid="3445614482886045" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="18804894290668" type="Sprite5">
                     <param id="0" name="Object">Sprite5</param>
                     <param id="1" name="Layer">2</param>
@@ -195,6 +198,114 @@
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="3759585825909418" type="Sprite2">
                     <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2237771099538316">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6046945786011403" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4481923174213606" type="Sprite3">
+                    <param id="0" name="Object">Sprite7</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="71402986009683">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6699494605379329" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3506165415681058" type="Sprite3">
+                    <param id="0" name="Animation">&quot;WalkRight2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7636322981157498">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6499266673523768" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8081325371678218" type="Sprite3">
+                    <param id="0" name="Animation">&quot;WalkLeft2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8308621664556295">
+            <conditions>
+                <condition id="2" name="Key is down" sid="8223120911244193" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4287560958851968" type="Sprite3">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5810211677639067">
+            <conditions>
+                <condition behavior="Turret" id="0" name="Has target" sid="1600899903995385" type="Sprite5" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="2155546692250411" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1859864612875856" type="Sprite5">
+                    <param id="0" name="Object">Sprite8</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6853095541429715" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5727611195699185">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1567819043288472" type="Sprite7">
+                    <param id="0" name="Object">Sprite5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="4380788142986942" type="Sprite5">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">random (6-12)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7719002823200222">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4266838616749537" type="Sprite5">
+                    <param id="0" name="Object">Sprite2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="5406896515019422" type="Sprite5">
+                    <param id="0" name="Target">Sprite2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7082184184399254">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="2890865172387705" type="Sprite5">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="822229061051317" type="Sprite5">
+                    <param id="0" name="Target">Sprite3</param>
                 </action>
             </actions>
         </event-block>
