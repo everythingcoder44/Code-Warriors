@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Title</name>
-    <sid>3058126408362234</sid>
-    <event-sheet>TitleSheet</event-sheet>
+    <name>GameOver</name>
+    <sid>2852844912580383</sid>
+    <event-sheet>Event sheet 2</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="8302316442467782">
+        <layer name="Layer 0" sid="5301222461304613">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TiledBackground6" uid="51">
+                <instance type="TiledBackground6" uid="74">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -57,8 +57,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-852</x>
-                        <y>0</y>
+                        <x>-855</x>
+                        <y>-2</y>
                         <z>0</z>
                         <width>1707</width>
                         <height>486</height>
@@ -69,24 +69,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Layer 1" sid="3139489605732437">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="Sprite" uid="52">
+                <instance type="Sprite" uid="75">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -118,23 +101,40 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>441.5</x>
-                        <y>385.259246826</y>
+                        <x>425</x>
+                        <y>168.333374023</y>
                         <z>0</z>
-                        <width>883</width>
-                        <height>89</height>
+                        <width>850</width>
+                        <height>272</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>-0.148148149</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.899999976</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="53">
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Layer 1" sid="1600240716856523">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Text5" uid="76">
                     <properties>
-                        <text>Code Warriors</text>
+                        <text>Game Over!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Comic Sans MS,-64,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -145,11 +145,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>48</x>
-                        <y>10</y>
+                        <x>231</x>
+                        <y>67</y>
                         <z>0</z>
-                        <width>808</width>
-                        <height>142</height>
+                        <width>386</width>
+                        <height>114</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -157,10 +157,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Button" uid="45">
+                <instance type="Button4" uid="77">
                     <properties>
                         <type>Button</type>
-                        <text>Play!</text>
+                        <text>Play again?</text>
                         <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
@@ -171,35 +171,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>357</x>
-                        <y>116</y>
+                        <x>359</x>
+                        <y>240</y>
                         <z>0</z>
-                        <width>72</width>
-                        <height>24</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="Button2" uid="64">
-                    <properties>
-                        <type>Button</type>
-                        <text>Instructions</text>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                        <checked>No</checked>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>342</x>
-                        <y>154</y>
-                        <z>0</z>
-                        <width>98</width>
-                        <height>24</height>
+                        <width>99</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
